@@ -2,11 +2,17 @@ import React from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import TicketTable from "../../../components/ticket-table/TicketTable";
 import tickets from "../../../assets/data/dummy-tickets.json";
+import BreadCrumb from "../../../components/breadcrumb/BreadCrumb";
 
 const Dashboard = () => {
   return (
     <>
       <Container>
+        <Row>
+          <Col>
+            <BreadCrumb page="Dashboard" />
+          </Col>
+        </Row>
         <Row>
           <Col className="text-center mt-5 mb-2">
             <Button
@@ -30,7 +36,7 @@ const Dashboard = () => {
           <hr />
           <Row>
             <Col className="recent-ticket">
-              <TicketTable tickets={tickets}/>
+              <TicketTable tickets={tickets} />
             </Col>
           </Row>
         </Row>
